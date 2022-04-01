@@ -49,7 +49,7 @@
 
             document.querySelector('h1').style.display = 'block';
             pre.textContent = 'Click ';
-            post.textContent = ' to start Minecraft';
+            post.textContent = ' to start the Game';
             document.querySelector('a').onclick = function() {
                 if (win) {
                     win.focus();
@@ -70,12 +70,12 @@
                         if (win.closed) {
                             clearInterval(interval);
                             win = undefined;
-                            pre.textContent = 'Minecraft closed. Click ';
-                            post.textContent = ' to reopen the Minecraft';
+                            pre.textContent = 'Game closed. Click ';
+                            post.textContent = ' to reopen the Game';
                         }
                     }, 500);
 
-                    pre.textContent = 'Minecraft is running. Click ';
+                    pre.textContent = 'Game is running. Click ';
                     post.textContent = ' to switch to that tab.';
                 }
             };
