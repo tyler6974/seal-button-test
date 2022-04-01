@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-
-<script>if (window.parent !== window.self) window.parent.postMessage("bonk", "*"); window.addEventListener("DOMContentLoaded", function() {document.body.style.margin = "0";document.body.style.height = "100vh";document.body.style.overflow = "hidden"})</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H40DD7W802"></script><script>window.dataLayer = window.dataLayer || [];function gtag() { dataLayer.push(arguments); }gtag("js", new Date());gtag("config", "G-H40DD7W802", {"send_page_view": false});gtag("event", "page_view", {dimension1: location.href, dimension2: location.host});</script>
-<script async src="/nc/script.min.js"></script><html>
-
-<head>
-    <style>
+   <style>
         body {
             margin: 0;
             height: 100vh;
@@ -23,22 +16,12 @@
             text-decoration: underline;
             cursor: pointer;
         }
-        p {
-            font-family: sans-serif;
-            margin: 0;
-            height: 20px;
-            display: inline-block;
-        }
     </style>
 </head>
 
-   
-<body style="margin: 0; height: 100vh;">
-  
-
- 
-    <h1><span id="pre"></span><a>here</a><span id="post"></span></h1>
-   <script>
+<body style="margin: 0px; height: 100vh; overflow: hidden;">
+    <h1 style="display: block;"><span id="pre">Click </span><a>here</a><span id="post"> to start the game</span></h1>
+    <script>
         var urlObj = new window.URL(window.location.href);
         var url = urlObj.searchParams.get('url');
 
@@ -49,12 +32,12 @@
 
             document.querySelector('h1').style.display = 'block';
             pre.textContent = 'Click ';
-            post.textContent = ' to start the Game';
+            post.textContent = ' to start the game';
             document.querySelector('a').onclick = function() {
                 if (win) {
                     win.focus();
                 } else {
-                    win = window.open("", "balls", "width=900,height=900");
+                    win = window.open();
                     win.document.body.style.margin = '0';
                     win.document.body.style.height = '100vh';
                     var iframe = win.document.createElement('iframe');
@@ -71,7 +54,7 @@
                             clearInterval(interval);
                             win = undefined;
                             pre.textContent = 'Game closed. Click ';
-                            post.textContent = ' to reopen the Game';
+                            post.textContent = ' to reopen the game';
                         }
                     }, 500);
 
@@ -80,7 +63,8 @@
                 }
             };
         }
-      </script>
-</body>
+    </script>
 
-</html>
+
+
+</body>            
